@@ -14,6 +14,7 @@ export class SpeiseplanPage implements OnInit {
 
   loadingFinished: boolean;
   selectedDate: Date = new Date();
+  
 
   hauptgerichte: Gericht[];
   beilagen: Gericht[];
