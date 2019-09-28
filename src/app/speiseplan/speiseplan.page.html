@@ -1,4 +1,7 @@
+
+
 <ion-content>
+  <div class="body">
   
   <mat-form-field class= 'dada'>
     <input matInput [(ngModel)]="selectedDate" (dateChange)="datumChange()" [matDatepicker]="picker" placeholder="Datum">
@@ -10,8 +13,8 @@
   <ion-card *ngFor="let gericht of hauptgerichte" class= 'Karte'>
       <ion-img  src="{{gericht.ImagePfad}}"class='Bild'></ion-img>
       <ion-card-header>
-          <ion-card-title>{{ gericht.Bezeichnung }}</ion-card-title>
-        <ion-card-subtitle> {{ gericht.Kategorie }} </ion-card-subtitle>
+          <ion-card-title class="text">{{ gericht.Bezeichnung }}</ion-card-title>
+        <ion-card-subtitle class="text"> {{ gericht.Kategorie }} </ion-card-subtitle>
       </ion-card-header>
       <ion-card-content class='Preis'>
           {{ gericht.Preis | currency:'EUR' }} 
@@ -20,12 +23,14 @@
 
     <ion-card *ngFor="let gericht of beilagen" class= 'Karte'>
         <ion-card-header> 
-            <ion-card-title>{{ gericht.Bezeichnung }}</ion-card-title>
-          <ion-card-subtitle> {{ gericht.Kategorie }} </ion-card-subtitle>
+            <ion-card-title class="text">{{ gericht.Bezeichnung }}</ion-card-title>
+          <ion-card-subtitle class="text"> {{ gericht.Kategorie }} </ion-card-subtitle>
         </ion-card-header>
         <ion-card-content class='Preis'>
             {{ gericht.Preis | currency:'EUR' }}
         </ion-card-content>
       </ion-card>
 
+    </div>
     </ion-content>
+   

@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { SpeiseplanPage } from './speiseplan.page';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatDatepickerModule, MatInputModule } from '@angular/material';
+import { MatDatepickerModule, MatInputModule, mixinColor } from '@angular/material';
 
 const routes: Routes = [
   {
